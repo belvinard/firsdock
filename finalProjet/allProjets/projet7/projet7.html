@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Generateur de code-barres</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="projet7.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Code bar link library -->
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+
+    <!-- pdf link library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- link js file -->
+    <script src="projet7.js" async></script>
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="home-container">
+
+        <div class="animationText"><h3>Générateur de code-barres</h3></div>
+
+        <div class="chronometre">
+
+          <div class="meter">
+
+            <div class="content">
+
+              <section class="inputBox">
+
+                <h2>Barcode generator</h2>
+
+                <div class="searchBar">
+
+                    <!--on utilise un input type="text" pour pouvoir montrer le contenu du mot de passe -->
+                    <input type="text" placeholder="Enter a text" id="text">
+                    <button id="buttonCodebBar">Generate</button>
+
+                </div>
+
+                <div id="box">
+
+                    <i class="fa fa-barcode" id="btn"></i>
+
+                </div>
+
+                <div id="pdfBox"></div>
+
+              </section>
+
+            </div>
+
+            
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+      
+  </body>
+    
+       
+
+</html>
+
+

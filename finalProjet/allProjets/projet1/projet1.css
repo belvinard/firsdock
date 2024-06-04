@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@200;300;400;600;700&family=Roboto+Mono:wght@300;400&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; 
+   border:none;
+   text-decoration: none;
+
+}
+
+/* root */
+:root{
+   --squeaky: #63cdda;
+   --rose: #ede;
+}
+
+body{
+   height: 100vh;
+   background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+   background-blend-mode: normal, lighten, soft-light;
+}
+
+body.active{
+   padding-left: 0;
+}
+/* chrono style starts */
+
+.container{
+   background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+   border-radius: 2rem;
+   z-index: -10000;
+   margin:  1.5rem 0 1.5rem .5rem;
+   padding: 1rem;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   border-radius: 2rem;
+}
+
+
+.container .home-container{
+   background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+   width: 100%;
+   display: block;
+   height: 100%;
+   margin: 2rem 0;
+   border-top-right-radius: 12rem;
+}
+
+
+.container .home-container .animati{
+   color: white;
+   text-align: center;
+   background: var(--squeaky);
+   border-radius: 20rem 0 20rem 0;
+   border-left: 3rem double rgba(0, 0, 0, 0.75);
+   width: 60%;
+   height: auto;
+   margin: 3rem 1.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 1.5rem 1.5rem;
+ 
+}
+
+.container .home-container .animati h3{
+   font-size: 4.5rem;
+   animation: flash 2s linear infinite;
+   
+}
+
+
+@keyframes flash{
+   0%{
+       color: #fff;
+       text-shadow: 0 0 4px bisque;
+   }
+   20%{
+       color: #484848;
+       text-shadow: none;
+   }
+   40%{
+      color: blue;
+      text-shadow: none;
+  }
+  60%{
+   color: #21b66f;
+   text-shadow: none;
+  }
+  70%{
+   color: red;
+   text-shadow: none;
+  }
+   100%{
+       color: #fff;
+       text-shadow: 0 0 4px bisque;
+
+   }
+}
+
+ 
+.container .home-container .chronometre{
+   display: grid;
+   grid-template-columns: 1fr;
+   margin: 3rem 1.5rem;
+   gap: .5rem;
+   height: auto;
+   background: var(--rose);
+}
+
+.container .home-container .chronometre .meter{
+   background-color: #21b66f;
+   display: flex; /* Pour rendre le corps de notre page flexible */
+   align-items: center; /* Centrer les élément verticalelement */
+   justify-content: center; /* Centrer les élément horizontalement */
+   margin: 3rem;
+   padding: 2rem 1rem;
+   outline: .3rem solid #ccc;
+   outline-offset: -.6rem;
+   height: 45vh;
+   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.container .home-container .chronometre .meter .content{
+   background: white;
+   padding: .9rem; /* Padding (marge interne) top , bottom, left,
+   * et right = .9rem */
+   width: 50rem;  /* Largeur de la boite 400px */
+   text-align: center; 
+   border-radius: .5rem; /* Bordure arrondie d'épaisseur .5rem */ 
+}
+
+.container .home-container .chronometre .meter .content .tim{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: .5rem;
+   border: .2rem solid #999;
+   padding: .5rem 0; /* Padding (ou marge interne) top et bottom = 5px * Padding left et right = 0px */
+   text-align: center; /* Centrer le text dans chronomètre */
+   font-size: 3.5rem;
+   font-weight: 400;  /* poids ou épaisseur de la police 400 qui est équivalent au mot clef normal */
+   margin-bottom: 1.5rem; 
+   font-family:  'Dancing Script', cursive;
+   
+}
+
+.container .home-container .chronometre .meter .content .tim span{
+   font-family:  'Dancing Script', cursive;
+   padding: .5rem;
+}
+
+
+.controls{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.controls button.active,
+.controls button.stopActive{
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.container .home-container .chronometre .meter .content button{
+   background-color: #1d9c5e;
+   font-size: 2rem; /* Taille du text 15px */
+   padding: .7rem 2rem;
+   border-radius: 1rem;
+   width: 31%;
+   letter-spacing: .5rem;
+   border: 0;
+   transition: 0.5s;
+   cursor: pointer;
+   color: #fff;
+}
+
+.container .home-container .chronometre .meter .content button:hover{
+   transform: scale(0.9);
+   font-weight: bold;
+   font-size: 2rem;
+}
+/*
+.container .home-container .chronometre .meter:hover{
+   outline: .4rem solid #2f3542;
+   outline-offset: 0;
+} */
+
+/* ******************************************* style css ends ******************************************* */
+
+
+/* ******************************************* media queries starts ******************************************* */
+
+
+@media (max-width: 1500px){
+    
+   html{
+      font-size: 55%;
+   }
+}
+
+
+@media (max-width: 1037px){
+
+   html{
+      font-size: 50%;
+   }
+}
+
+@media (max-width: 991px){
+
+
+   html{
+      font-size: 50%;
+   }
+
+
+}
+
+
+@media (max-width: 588px){
+   
+   html{
+      font-size: 45%;
+   }
+}
+
+@media (max-width: 524px){
+
+   html{
+      font-size: 45%;
+   }
+   
+   /* ***************** side responsive starts *****************  */
+
+   
+
+} 
+
+/* *************************** medias queries ***************** */

@@ -1,0 +1,97 @@
+
+/*link to import google font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Roboto:wght@100;300;400&display=swap');
+ 
+/* Reset css */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Popins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    padding: 10px;
+    box-shadow: 0 0 20px 0 blue;
+}
+
+.todo{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 120px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo h2{
+    color: #002769;
+    margin-bottom: 40px; /* Marge externe du côté inférieur = 40px */
+    text-align: center;
+
+}
+
+.global{
+    display: flex;/* Pour rendre les éléments de notre page flexible */
+    align-items: center; /* Centrer les élément verticalelement */
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    border-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1; /* Pour que tous les éléments flexibles aient la même longueur, quel que soit leur contenu */
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button{
+    border: none;
+    outline: none; 
+    padding: 16px 50px;
+    background-color: #3B7E20CC;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px 0 30px 0;
+    color: white;
+    font-weight: bold;
+    border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+   
+.stylePara:last-child{/*On cible le dernier paragraphe */
+    margin-bottom: 0;
+}
+
+.stylePara{
+    margin: 10px 0;
+    padding: 10px 0;
+    padding-left: 5px;
+    border-radius: 6px;
+    color: white;
+    background-color: #3B7E20CC;
+    word-break: break-all;
+    cursor: pointer;
+    font-weight: bold;
+    animation: anime 0.5s linear;
+}
+
+
+@keyframes anime {
+    from{
+        transform: translateY(90px);
+    }
+}
+
+.para_clicked{
+    text-decoration: line-through;
+    color: red;
+    background-color: lightskyblue
+}

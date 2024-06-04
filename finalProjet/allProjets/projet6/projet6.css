@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@200;300;400;600;700&family=Roboto+Mono:wght@300;400&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; 
+   border:none;
+   text-decoration: none;
+
+}
+
+html{
+   font-size: 62.5%;
+}
+
+/* root */
+:root{
+   --squeaky: #63cdda;
+   --rose: #ede;
+}
+
+body{
+   height: 100vh;
+   background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+   background-blend-mode: normal, lighten, soft-light;
+   
+}
+
+body.active{
+   padding-left: 0;
+}
+/* chrono style starts */
+
+.container{
+   background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+   border-radius: 2rem;
+   z-index: -10000;
+   margin:  1.5rem 0 1.5rem .5rem;
+   padding: 1rem;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   border-radius: 2rem;
+}
+
+
+.container .home-container{
+   background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+   width: 100%;
+   display: block;
+   height: 100%;
+   margin: 2rem 0;
+   border-top-right-radius: 12rem;
+   height: auto;
+}
+
+
+.container .home-container .animationText{
+   color: white;
+   text-align: center;
+   padding: 1.5rem 1.5rem;
+   background: var(--squeaky);
+   border-radius: 20rem 0 20rem 0;
+   border-left: 3rem double rgba(0, 0, 0, 0.75);
+   width: 60%;
+   height: auto;
+   margin: 2rem 1.5rem;
+}
+
+
+.container .home-container .animationText h3{
+   -webkit-text-stroke: 1px white; 
+   color: transparent;
+   background-image: linear-gradient(#fff, #ffff);
+   background-repeat: no-repeat;
+   -webkit-background-clip: text;
+   font-size: 4rem;
+   background-position: -770px 0;
+   animation: backcolor 2s linear infinite alternate;
+
+}
+
+@keyframes backcolor{
+
+   20%{
+      background-position: 3 1;
+   }
+
+   100%{
+      background-position: 0 0;
+   }
+}
+
+ 
+.container .home-container .chronometre{
+   margin: 3rem 1.5rem;
+   display: flex;
+   align-items: center;
+   background: var(--rose);
+   height: auto;
+}
+
+.container .home-container .chronometre .meter{
+   background-color: #18f; /* Couleur de fond de notre page */
+   display: flex; /* Pour rendre le corps de notre page flexible */
+   align-items: center; /* Centrer les élément verticalelement */
+   justify-content: center; /* Centrer les élément horizontalement */
+   margin: 3rem;
+   padding: 2rem 1rem;
+   outline: .3rem solid #ccc;
+   outline-offset: -.6rem;
+   width: 100%;
+   flex-direction: column;
+   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+   height: 475px;
+}
+
+.container .home-container .chronometre .meter section{
+   width: 600px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.container .home-container .chronometre .meter section .calcul{
+   display: flex;
+
+}
+
+.container .home-container .chronometre .meter section .calcul h1{
+   color: white;
+   font-size: 50px; /* Taille de la police 50px */
+   margin: 0 20px;
+}
+
+.container .home-container .chronometre .meter section h2{
+   color: #fff;
+   margin: 0 10px;
+   font-size: 20px; /* Taille de la police 50px */
+}
+
+.container .home-container .chronometre .meter section input{
+   padding: 10px 0;
+   border: 0;
+   border-bottom: 2px solid #fff;
+   background-color: transparent;
+   margin-bottom: 30px;
+   outline: 0;
+   color: white;
+   font-size: 20px;
+}
+
+
+.container .home-container .chronometre .meter section .Message{
+   color: #fff;
+   padding: 5px 25px;
+   margin-bottom: 25px;
+   border-radius: 10px;
+}
+
+
+
+.container .home-container .chronometre .meter section input[type="submit"]{
+   padding: 10px 65px;
+   border: 0;
+   background-color: blue;
+   cursor: pointer;
+   border-radius: 5px;
+   text-transform: uppercase;
+   font-size: 15px;
+   color: #fff;
+}
+
+
+.container .home-container .chronometre .meter section input[type="submit"]:hover{
+   letter-spacing: 2px;
+}
+
+
+.score{
+   font-size: 25px;
+   color: #fff;
+   text-align: center;
+
+}
+
+a{
+   color: white;
+   text-decoration: 0;
+   border: 1px solid #fff;
+   padding: 10px 25px;
+   border-radius: 5px;
+   margin: 25px 0;
+   display: none;
+   font-size: 15px;
+}
+
+
+/* medias queries */
+
+@media (max-width: 768px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .container .home-container .chronometre .meter section{
+      width: 450px;
+   }
+
+}
+
+
+@media (max-width: 588px){
+
+   html{
+      font-size: 45%;
+   }
+
+   .container .home-container .chronometre .meter section{
+      width: 400px;
+   }
+
+   .container .home-container .animationText{
+      width: 70%;
+   }
+
+}
+
+
+@media (max-width: 524px){
+
+   html{
+      font-size: 45%;
+   }
+
+   .container .home-container .chronometre .meter section{
+      width: 360px;
+   }
+
+   .container .home-container .animationText{
+      width: 70%;
+   }
+
+   .container .home-container .chronometre .meter section input{
+      width: 280px;
+   }
+
+}
